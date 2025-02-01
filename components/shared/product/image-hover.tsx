@@ -12,6 +12,7 @@ const ImageHover = ({
   alt: string
 }) => {
   const [isHovered, setIsHovered] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let hoverTimeout: any
   const handleMouseEnter = () => {
     hoverTimeout = setTimeout(() => setIsHovered(true), 1000) // 1 second delay
