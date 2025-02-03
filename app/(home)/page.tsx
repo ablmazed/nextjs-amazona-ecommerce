@@ -5,6 +5,8 @@ import { toSlug } from '@/lib/utils'
 
 import ProductSlider from '@/components/shared/product/product-slider'
 import { Card, CardContent } from '@/components/ui/card'
+
+import BrowsingHistoryList from '@/components/shared/browsing-history-list'
 import {
   getAllCategories,
   getProductsByTag,
@@ -86,6 +88,9 @@ export default async function HomePage() {
             />
           </CardContent>
         </Card>
+      </div>
+      <div className="p-4 bg-background">
+        <BrowsingHistoryList />
       </div>
     </>
   )
