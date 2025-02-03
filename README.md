@@ -114,6 +114,9 @@ https://next-mongo-ecommerce-final.vercel.app/
 - [35-create-update-web-pages](./lessons/35-create-update-web-pages.md)
 - [36-create-settings-page](./lessons/36-create-settings-page.md)
 - [37-make-website-multilingual](./lessons/37-make-website-multilingual.md)
+- [70-Conclusion](./lessons/70-Conclusion.md)
+
+https://nextjs-amazona-ecommerce.vercel.app/
 
 ## Contact Developer
 
