@@ -5,11 +5,15 @@ import {
   UserInputSchema,
   UserSignInSchema,
   UserSignUpSchema,
+  ShippingAddressSchema,
+  OrderInputSchema,
 } from '@/lib/validator'
 import { z } from 'zod'
 
 export type IProductInput = z.infer<typeof ProductInputSchema>
 export type IUserSignUp = z.infer<typeof UserSignUpSchema>
+export type IOrderInput = z.infer<typeof OrderInputSchema>
+
 export type Data = {
   users: IUserInput[]
   products: IProductInput[]
@@ -31,3 +35,5 @@ export type Cart = z.infer<typeof CartSchema>
 
 export type IUserInput = z.infer<typeof UserInputSchema>
 export type IUserSignIn = z.infer<typeof UserSignInSchema>
+
+export type ShippingAddress = z.infer<typeof ShippingAddressSchema>
