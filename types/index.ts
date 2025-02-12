@@ -8,9 +8,11 @@ import {
   ShippingAddressSchema,
   OrderInputSchema,
   ReviewInputSchema,
+  UserNameSchema,
 } from '@/lib/validator'
 import { z } from 'zod'
 
+export type IUserName = z.infer<typeof UserNameSchema>
 export type IProductInput = z.infer<typeof ProductInputSchema>
 export type IUserSignUp = z.infer<typeof UserSignUpSchema>
 export type IOrderInput = z.infer<typeof OrderInputSchema>
