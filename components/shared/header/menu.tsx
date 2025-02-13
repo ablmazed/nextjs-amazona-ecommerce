@@ -3,30 +3,47 @@
 import CartButton from './cart-button'
 import UserButton from './user-button'
 
-export default function Menu() {
+import { EllipsisVertical } from 'lucide-react'
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import ThemeSwitcher from './theme-switcher'
+
+const Menu = ({ forAdmin = false }: { forAdmin?: boolean }) => {
   return (
     <div className="flex justify-end">
-      <nav className="flex gap-3 w-full">
-        {/* <Link href="/cart" className="header-button">
-          <UserIcon className="h-8 w-8" />
-          <span className="font-bold">Sign in</span>
-        </Link> 
+      <nav className="md:flex gap-3 hidden w-full">
+        <ThemeSwitcher />
 
-        <Link href="/cart" className="header-button">
-          <ShoppingCartIcon className="h-8 w-8" />
-          <span className="font-bold">Cart</span>
-        </Link>
-
-      */}
-
-        {/* <Link href="/sign-in" className="flex items-center header-button">
-          - Hello, Sign in -{' '}
-        </Link> */}
-
+        {forAdmin ? null : <CartButton />}
         <UserButton />
+      </nav>
 
-        <CartButton />
+      <nav className="md:hidden">
+        <Sheet>
+          <SheetTrigger className="align-middle header-button">
+            <EllipsisVertical className="h-6 w-6" />
+          </SheetTrigger>
+          <SheetContent className="bg-black text-white  flex flex-col items-start  ">
+            <SheetHeader className="w-full">
+              <div className="flex items-center justify-between ">
+                <SheetTitle>Site Menu</SheetTitle>
+                <SheetDescription></SheetDescription>
+              </div>
+            </SheetHeader>
+            <ThemeSwitcher />
+            <UserButton />
+            <CartButton />
+          </SheetContent>
+        </Sheet>
       </nav>
     </div>
   )
 }
+
+export default Menu
