@@ -9,7 +9,7 @@ export default async function HomeLayout({
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <h1>I am Home</h1>
+      <h1>I am Home by home layout</h1>
       <main className="flex-1 flex flex-col">{children}</main>
       <Footer />
     </div>
